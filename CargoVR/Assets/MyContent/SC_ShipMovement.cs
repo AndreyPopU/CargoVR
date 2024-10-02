@@ -41,6 +41,4 @@ public class SC_ShipMovement : MonoBehaviour
         moveSpeed = Random.Range(2f, 15f); //change random speed for "new" ship
         lifetime = Random.Range(5f, 15f); //set random lifetime
     }
-
-
 }

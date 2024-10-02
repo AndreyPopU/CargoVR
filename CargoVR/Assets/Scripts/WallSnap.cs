@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,11 @@ public class WallSnap : MonoBehaviour
 
     public int snappedCount;
     public bool[] snappedCorrect = new bool[3];
+
+    [Header("Packages")]
+    public GameObject[] packagePrefabs;
+    public Transform spawnPosition;
+    public ParticleSystem spawnEffect;
 
     private void Awake()
     {
@@ -22,6 +28,19 @@ public class WallSnap : MonoBehaviour
             if (!snappedCorrect[i]) return;
 
             print("Puzzle is complete");
+        }
+    }
+
+    private IEnumerator DropPackages()
+    {
+        float interval = 1;
+        int packages = 4;
+
+        while(packages > 0)
+        {
+            Instantiate(packagePrefabs[--packages], spawnPosition.position, Quaternion.identity);
+            spawnEffect.Play();
+            yield return new WaitForSeconds(interval);
         }
     }
  }
