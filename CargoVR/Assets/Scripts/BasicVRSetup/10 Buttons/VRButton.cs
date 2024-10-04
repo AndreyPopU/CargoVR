@@ -32,9 +32,11 @@ public class VRButton : MonoBehaviour
     public Image fadeOverlay;
     public float fadeDuration = 2.0f;
 
-    public bool task1 = false;
-    public bool task2 = false;
-    public bool task3 = false;
+    public bool task1 = false; //pipes
+    public bool task2 = false; //gas canister
+    public bool task3 = false; //helmet
+    public bool task4 = false; //packages on landing pad
+    public bool task5 = false; //condensed fuel
 
     private void Start()
     {
@@ -43,12 +45,14 @@ public class VRButton : MonoBehaviour
         {
             fadeOverlay.color = new Color(0, 0, 0, 0); // overlay starts transparent check
         }
+
+        TakeoffMessage();
     }
 
     // Checks if the current collider entering is the Button and sets off OnPressed event.
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Button" && !_deadTimeActive && task1 && task2 && task3)
+        if (other.tag == "Button" && !_deadTimeActive && task1 && task2 && task3 && task4 && task5)
         {
             onPressed?.Invoke();
             Debug.Log("I have been pressed");
