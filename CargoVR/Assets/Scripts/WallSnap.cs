@@ -27,6 +27,8 @@ public class WallSnap : MonoBehaviour
         {
             if (!snappedCorrect[i]) return;
 
+            StartCoroutine(DropPackages());
+            VRButton.instance.task1 = true;
             print("Puzzle is complete");
         }
     }

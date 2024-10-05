@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GasTank : MonoBehaviour
 {
     public float value;
-    float EngineValue;
     public Slider progressSlider;
     public ParticleSystem fuelVFX;
 
@@ -18,7 +17,6 @@ public class GasTank : MonoBehaviour
             {
                 if (!fuelVFX.isPlaying) fuelVFX.Play();
                 FuelUp(-1);
-                EngineValue = EngineValue + 1;
             }
             else
             {

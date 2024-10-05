@@ -6,6 +6,8 @@ using UnityEngine.UI; // Needed for fading effect
 
 public class VRButton : MonoBehaviour
 {
+    public static VRButton instance;
+
     // Time that the button is set inactive after release
     public float deadTime = 1.0f;
     // Bool used to lock down button during its set dead time
@@ -37,6 +39,11 @@ public class VRButton : MonoBehaviour
     public bool task3 = false; //helmet
     public bool task4 = false; //packages on landing pad
     public bool task5 = false; //condensed fuel
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
