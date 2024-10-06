@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI; // Needed for fading effect
 
 public class VRButton : MonoBehaviour
 {
+    //taskrefs
+    public TMP_Text textMeshPro1;
+    public TMP_Text textMeshPro2;
+    public TMP_Text textMeshPro3;
+    public TMP_Text textMeshPro4;
+    public TMP_Text textMeshPro5;
+
+    public TMP_Text congrats; //end game texts
+
     public static VRButton instance;
 
     // Time that the button is set inactive after release
@@ -53,7 +63,7 @@ public class VRButton : MonoBehaviour
             fadeOverlay.color = new Color(0, 0, 0, 0); // overlay starts transparent check
         }
 
-        TakeoffMessage();
+        //TakeoffMessage(); //takeoff sequence testing
     }
 
     // Checks if the current collider entering is the Button and sets off OnPressed event.
@@ -106,6 +116,7 @@ public class VRButton : MonoBehaviour
             }
 
             fadeOverlay.color = endColor; // fully black at end check
+            congrats.color = new Color(1, 1, 1, 1); //make congrats message appear when screen has fully faded
         }
     }
 
@@ -130,5 +141,29 @@ public class VRButton : MonoBehaviour
         }
         // start fade after delay
         StartCoroutine(FadeToBlackAfterDelay(fadeDelay));
+    }
+    void Update()
+    {
+        //change colour to green if value is true
+        if (task1)
+        {
+            textMeshPro1.color = Color.green;
+        }
+        if (task2)
+        {
+            textMeshPro2.color = Color.green;
+        }
+        if (task3)
+        {
+            textMeshPro3.color = Color.green;
+        }
+        if (task4)
+        {
+            textMeshPro4.color = Color.green;
+        }
+        if (task5)
+        {
+            textMeshPro5.color = Color.green;
+        }
     }
 }
