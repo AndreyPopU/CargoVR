@@ -15,6 +15,7 @@ TagManager:
   - explosion
   - Engine
   - CondensedFuel
+  - Packages
   layers:
   - Default
   - TransparentFX
