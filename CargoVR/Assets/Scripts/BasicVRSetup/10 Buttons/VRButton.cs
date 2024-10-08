@@ -63,7 +63,7 @@ public class VRButton : MonoBehaviour
             fadeOverlay.color = new Color(0, 0, 0, 0); // overlay starts transparent check
         }
 
-        //TakeoffMessage(); //takeoff sequence testing
+        TakeoffMessage(); //takeoff sequence testing
     }
 
     // Checks if the current collider entering is the Button and sets off OnPressed event.
