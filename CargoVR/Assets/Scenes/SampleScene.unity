@@ -21046,6 +21046,7 @@ GameObject:
   - component: {fileID: 989488041}
   - component: {fileID: 989488040}
   - component: {fileID: 3469287836569045993}
+  - component: {fileID: 3469287836569045994}
   m_Layer: 0
   m_Name: ----Helmet-------------------
   m_TagString: Untagged
@@ -21398,6 +21399,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9999995, y: 1.9306304, z: 1.9999998}
   m_Center: {x: -0.00000008940697, y: -0.03547159, z: -0.00000011920929}
+--- !u!114 &3469287836569045994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149070126839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56a88691cc1bdd4c95bff21295dfcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3565358897098403322
 Transform:
   m_ObjectHideFlags: 0
