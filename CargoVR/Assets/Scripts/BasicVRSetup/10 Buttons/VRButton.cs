@@ -120,10 +120,10 @@ public class VRButton : MonoBehaviour
         }
     }
 
-    private void TakeoffMessage() //call takeoff sequence
+    public void TakeoffMessage() //call takeoff sequence
     {
         // Switch to takeoff cam
-        if (newCamera != null && mainCamera != null)
+        if (newCamera != null && mainCamera != null && task1 && task2 && task3 && task4 && task5)
         {
             mainCamera.enabled = false;
             newCamera.enabled = true;
