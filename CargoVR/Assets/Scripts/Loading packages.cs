@@ -9,10 +9,10 @@ public class Loadingpackages : MonoBehaviour
     {
         if (other.gameObject.tag == "Packages")
         {
-            gameObject.SetActive(false); //once packages hit the collider they dissapear
+            other.gameObject.SetActive(false); //once packages hit the collider they dissapear
             packagenumber++; //increase the number of packages already loaded on ship
         }
-        if (packagenumber == 5)
+        if (packagenumber == 4)
         {
             gameObject.SetActive (false); //once all 5 packages are on board the hitbox is no longer functional
             //Destroy (Object Hitbox); //alternatively destroy the hitbox
