@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI; // Needed for fading effect
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class VRButton : MonoBehaviour
 {
@@ -118,6 +119,8 @@ public class VRButton : MonoBehaviour
             fadeOverlay.color = endColor; // fully black at end check
             congrats.color = new Color(1, 1, 1, 1); //make congrats message appear when screen has fully faded
         }
+
+        
     }
 
     public void TakeoffMessage() //call takeoff sequence
