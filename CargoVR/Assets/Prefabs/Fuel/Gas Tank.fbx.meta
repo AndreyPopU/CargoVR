@@ -3,7 +3,27 @@ guid: afe275fdfaa0e384da1f676e2489bb57
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faucet
+    second: {fileID: 2100000, guid: a615642619d3ca349ac48b2265d9697e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legs
+    second: {fileID: 2100000, guid: ab5564b34f9c44140a1858fa71fa48ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main body
+    second: {fileID: 2100000, guid: 6d230870961a36745a9f93c4e439eebb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OT Tubes
+    second: {fileID: 2100000, guid: 2ffceb5a1b8f1584b90a4c4ba3cdfbbb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
