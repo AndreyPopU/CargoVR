@@ -8,6 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class VRButton : MonoBehaviour
 {
+    public Transform PlayerObject;
     //taskrefs
     public TMP_Text textMeshPro1;
     public TMP_Text textMeshPro2;
@@ -128,22 +129,26 @@ public class VRButton : MonoBehaviour
         // Switch to takeoff cam
         if (newCamera != null && mainCamera != null && task1 && task2 && task3 && task4 && task5)
         {
-            mainCamera.enabled = false;
-            newCamera.enabled = true;
-        }
+            //mainCamera.enabled = false;
+            //newCamera.enabled = true;
 
-        // call takeoff function on cargo ship
-        if (cargoShip != null && !string.IsNullOrEmpty(cargoShipFunction))
-        {
-            cargoShip.SendMessage(cargoShipFunction);
+            //instead of switching cameras move player to a position and rotate the camera
+            PlayerObject.position = newCamera.transform.position;
+            mainCamera.transform.rotation = newCamera.transform.rotation;
+
+            // call takeoff function on cargo ship
+            if (cargoShip != null && !string.IsNullOrEmpty(cargoShipFunction))
+            {
+                cargoShip.SendMessage(cargoShipFunction);
+            }
+            // call takeoff for hangar roof
+            if (hangarRoof != null && !string.IsNullOrEmpty(hangarRoofFunction))
+            {
+                hangarRoof.SendMessage(hangarRoofFunction);
+            }
+            // start fade after delay
+            StartCoroutine(FadeToBlackAfterDelay(fadeDelay));
         }
-        // call takeoff for hangar roof
-        if (hangarRoof != null && !string.IsNullOrEmpty(hangarRoofFunction))
-        {
-            hangarRoof.SendMessage(hangarRoofFunction);
-        }
-        // start fade after delay
-        StartCoroutine(FadeToBlackAfterDelay(fadeDelay));
     }
     void Update()
     {

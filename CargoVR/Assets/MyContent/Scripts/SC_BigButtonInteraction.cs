@@ -19,8 +19,8 @@ public class SC_BigButtonInteraction : MonoBehaviour
         {
             VRButton.instance.TakeoffMessage();
         }
-        //gameObject.SetActive(false);
-        // Destroy(gameObject);
+        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     void OnDestroy()

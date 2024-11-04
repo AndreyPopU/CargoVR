@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18957114, g: 0.23067808, b: 0.19841135, a: 1}
+  m_IndirectSpecularColor: {r: 0.18959248, g: 0.23062879, b: 0.19839135, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4041,6 +4041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59be9526f361e544497f190af77d5812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1836622550}
   textMeshPro1: {fileID: 1950903381}
   textMeshPro2: {fileID: 1497284815}
   textMeshPro3: {fileID: 1854294279}
@@ -4057,16 +4058,16 @@ MonoBehaviour:
   newCamera: {fileID: 221194169}
   cargoShip: {fileID: 1891448618}
   cargoShipFunction: Takeoff
-  hangarRoof: {fileID: 0}
+  hangarRoof: {fileID: 3750351198686039916}
   hangarRoofFunction: Takeoff
   fadeDelay: 3
   fadeOverlay: {fileID: 640731096}
   fadeDuration: 2
-  task1: 1
-  task2: 1
-  task3: 1
-  task4: 1
-  task5: 1
+  task1: 0
+  task2: 0
+  task3: 0
+  task4: 0
+  task5: 0
 --- !u!65 &1044623383
 BoxCollider:
   m_ObjectHideFlags: 0
