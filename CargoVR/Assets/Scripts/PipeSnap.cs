@@ -20,6 +20,7 @@ public class PipeSnap : MonoBehaviour
         interactor = GetComponent<XRSocketInteractor>();
         gfx = transform.GetChild(0);
 
+        // Set the type index based on the pipe type
         switch (type)
         {
             case Type.Straight: typeIndex = 0; break;
@@ -34,6 +35,7 @@ public class PipeSnap : MonoBehaviour
 
     public void OnSnapPipe() // Invoked in Inspector
     {
+        // If interactable is null or interactable isn't a pipe - don't enter the if statement
         if (interactor.GetOldestInteractableSelected() != null && interactor.GetOldestInteractableSelected().transform.TryGetComponent(out Pipe pipe))
         {
             if (pipe.typeIndex == typeIndex)

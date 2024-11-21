@@ -23,16 +23,19 @@ public class WallSnap : MonoBehaviour
 
     public void CheckIfPipeCorrect()
     {
+        // If complete - return;
         if (VRButton.instance.task1) return;
 
-        for (int i = 0; i < snappedCorrect.Length; i++)
+        for (int i = 0; i < snappedCorrect.Length; i++) // Go through whole snapped bool array
         {
-            if (!snappedCorrect[i]) return;
+            if (!snappedCorrect[i]) return; // If a bool is false - not all pipes are snapped correctly - return
         }
 
+        // Start dropping packages
         StartCoroutine(DropPackages());
+
+        // Set puzzle as complete
         VRButton.instance.task1 = true;
-        print("Puzzle is complete");
     }
 
     private IEnumerator DropPackages()

@@ -15,6 +15,7 @@ public class Loadingpackages : MonoBehaviour
         if (packagenumber == 4)
         {
             gameObject.SetActive (false); //once all 5 packages are on board the hitbox is no longer functional
+            VRButton.instance.task4 = true;
             //Destroy (Object Hitbox); //alternatively destroy the hitbox
         }
     }

@@ -17,7 +17,7 @@ public class FuelTank : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // If gas tank above fuel zone and tilted down - start fueling
-        if (gasTank.value > 0 && gasTank.transform.eulerAngles.z > 225 && gasTank.transform.eulerAngles.z < 315)
+        if (gasTank.fuel > 0 && gasTank.transform.eulerAngles.z > 225 && gasTank.transform.eulerAngles.z < 315)
             FuelUp(1);
     }
 
